@@ -87,12 +87,12 @@ const Index = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.google.com/maps/dir//Av.+Ces%C3%A1rio+Alvim,+818+-+Centro,+Uberl%C3%A2ndia+-+MG,+38400-098/@-18.9166706,-48.3548947,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94a445efc6a95ae9:0x9807940a374876b9!2m2!1d-48.272493!2d-18.9166888?entry=ttu"
+              href="https://maps.app.goo.gl/RdZ72fpBRLGMhTCx8"
               className="hover:underline"
             >
               <p className="text-sm md:text-base leading-snug">
-                Avenida Cesário Alvim, 818, loja 25, 26 e 27, Edifício 2000<br />
-                Centro, Uberlândia - MG
+                Rua Dr. Jesuino Felicissimo, 36 Quinta da Boa Esperança<br/>
+                Uberaba - MG
               </p>
             </a>
 
@@ -109,7 +109,7 @@ const Index = () => {
             </p>
 
             <p className="text-xs text-gray-200 mt-2">
-              © 2025 Rádio 89.7 Maravilha FM — Todos os direitos reservados.
+              © 2025 Rádio 89.3 Maravilha FM — Todos os direitos reservados.
             </p>
           </div>
         </div>
