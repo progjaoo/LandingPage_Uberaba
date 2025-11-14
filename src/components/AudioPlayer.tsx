@@ -46,7 +46,6 @@ const AudioPlayer = () => {
     radioService.setVolume(novoVol / 100);
   };
 
-  // Lógica da exibição
   const nomeMusica = musicaAtual?.trim() || "";
   const isInvalido =
     nomeMusica === "-" ||
@@ -66,7 +65,6 @@ const AudioPlayer = () => {
   return (
     <div className="w-full max-w-2xl mx-auto bg-player-bg rounded-2xl shadow-xl p-6 animate-fade-in">
       <div className="flex items-center justify-between gap-4">
-        {/* --- LADO ESQUERDO: Botão + Info --- */}
         <div className="flex items-center gap-4 flex-1 min-w-0">
           <button
             onClick={togglePlay}

@@ -1,16 +1,8 @@
-// src/services/radioService.ts
-
-// -----------------------------
-// Interface da API
-// -----------------------------
 export interface RadioInfo {
   status: string;
   musica_atual: string;
 }
-
-// -----------------------------
-// Função para buscar info atual da rádio
-// -----------------------------
+//API que retorna os dados de música, capas, artistas etc
 const API_URL = "https://radiovox.conectastm.com/api-json/Vkc1d1FrNUZNVUpRVkRBOStS";
 
 export async function getRadioInfo(): Promise<RadioInfo | null> {
@@ -35,14 +27,11 @@ export async function getRadioInfo(): Promise<RadioInfo | null> {
   }
 }
 
-// -----------------------------
-// para controlar o player
-// -----------------------------
 class RadioService {
   private listeners: ((playing: boolean) => void)[] = [];
   private isPlaying = false;
   private audio: HTMLAudioElement | null = null;
-  private audioUrl = "https://stm19.srvstm.com:7080/stream";
+  private audioUrl = "https://stm6.srvstm.com:7006/stream"; //STREAM DE UBERABA QUE RETRANSMITE MARAVILHA BH
 
   private getAudio(): HTMLAudioElement {
     if (!this.audio) {
@@ -62,34 +51,31 @@ class RadioService {
       this.listeners = this.listeners.filter((fn) => fn !== callback);
     };
   }
-
+//botão de play
   play() {
     this.getAudio().play();
     this.isPlaying = true;
     this.emit();
   }
-
+//botao pause
   pause() {
     this.getAudio().pause();
     this.isPlaying = false;
     this.emit();
   }
+//evento clique
 
   toggle() {
     this.isPlaying ? this.pause() : this.play();
   }
-
+//setando volume
   setVolume(vol: number) {
     this.getAudio().volume = vol;
   }
-
+//Emitindo cada ouvinte
   private emit() {
     this.listeners.forEach((cb) => cb(this.isPlaying));
   }
 }
-
-// -----------------------------
-// Export padrão do serviço
-// -----------------------------
 const radioService = new RadioService();
 export default radioService;
