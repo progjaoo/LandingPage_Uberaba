@@ -48,6 +48,7 @@ const AudioPlayer = () => {
 
   const nomeMusica = musicaAtual?.trim() || "";
   const isInvalido =
+    nomeMusica === "" ||
     nomeMusica === "-" ||
     nomeMusica === "" ||
     nomeMusica.toLowerCase().includes("radio maravilha fm") ||
