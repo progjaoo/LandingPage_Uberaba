@@ -91,7 +91,7 @@ const Index = () => {
               </p>
             </a>
 
-            <p className="text-sm md:text-base">
+            {/* <p className="text-sm md:text-base">
               Whatsapp:{" "}
               <a
                 href="https://wa.me/5531999982089"
@@ -101,7 +101,7 @@ const Index = () => {
               >
                 (31) 99998-2089
               </a>
-            </p>
+            </p> */}
 
             <p className="text-xs text-gray-200 mt-2">
               © 2025 Rádio 89.3 Maravilha FM — Todos os direitos reservados.
