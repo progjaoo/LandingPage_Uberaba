@@ -2,8 +2,10 @@ export interface RadioInfo {
   status: string;
   musica_atual: string;
 }
-//API que retorna os dados de música, capas, artistas etc
-const API_URL = "https://radiovox.conectastm.com/api-json/Vkc1d1FrNUZNVUpRVkRBOStS";
+
+const API_URL = "";
+
+// https://radiovox.conectastm.com/api-json/Vkc1d1FrNUZNVUpRVkRBOStS
 
 export async function getRadioInfo(): Promise<RadioInfo | null> {
   try {
